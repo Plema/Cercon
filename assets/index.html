@@ -9,14 +9,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Numans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" data-inprogress="" />
-
+    <link rel="stylesheet" href="css/home.min.css" data-inprogress="" />
     <title>Cercon</title>
+    <style>
+      .banner {
+        background-image: url(img/banner__bg-1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -100px;
+      }
+      @media (min-width: 768px) {
+        .banner {
+          background-image: url(img/banner__bg.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+      @media (min-width: 1024px) {
+        .banner {
+          background-image: url(img/banner__bg-1.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position-x: center;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="title-wrapper">
-      <p class="subtitle">о лаборатории</p>
-      <h2 class="title">Lorem Ipsum - это текст-"рыба"</h2>
+    <div class="wrapper">
+      <include src="assets/templates/header.html"></include>
+      <main class="main">
+        <section class="banner">
+          <div class="shadow-wrapper">
+            <div class="container">
+              <div class="content-wrapper">
+                <h1 class="main-title">Lorem Ipsum - это текст-"рыба".</h1>
+                <p class="main-description">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...
+                </p>
+                <a href="javascript:void(0)" class="button submit-application"
+                  ><p>Оставить заявку</p>
+                  <svg class="icon-file">
+                    <use href="img/sprite.svg#icon-file__white"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="content__desktop">
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+              </div>
+              <a href="#modern-laboratory" class="anchor anchor__down">
+                <svg class="icon-anchor">
+                  <use href="img/sprite.svg#icon-anchor"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="modern-laboratory" id="modern-laboratory">
+          <div class="img-wrapper">
+            <img src="img/photo.png" alt="photo" />
+          </div>
+          <div class="text-wrapper">
+            <p class="main-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+            <p class="text">
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI Lorem Ipsum - это текст-"рыба",
+              часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...
+            </p>
+            <p class="text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+            <p class="author-title">Имя и Фамилия</p>
+            <p class="quotes">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+          </div>
+        </section>
+      </main>
+      <include src="assets/templates/footer.html"></include>
     </div>
-    <a href="" class="button button__white"></a>
+
+    <!-- script -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.matchHeight.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/accordion.min.js"></script>
+
+    <script src="js/index.min.js"></script>
   </body>
 </html>
