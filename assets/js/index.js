@@ -19,4 +19,21 @@ $(document).ready(function () {
     $(this).addClass('tabs-triggers__item-active')
     $($(this).attr('href')).addClass('tabs-content__item-active')
   })
+
+  $('.show-list').on('click', function () {
+    $('.show-list').toggleClass('show-list-active')
+    $('.tabs-inner-triggers__item').toggleClass('tabs-inner-triggers__item-show')
+  })
+
+  $('.tabs-inner-triggers__item').click(function (e) {
+    e.preventDefault()
+
+    $('.tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-active')
+    $('.tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-show')
+    $('.tabs-inner-content__item').removeClass('tabs-inner-content__item-active')
+
+    $(this).addClass('tabs-inner-triggers__item-active')
+    $($(this).attr('href')).addClass('tabs-inner-content__item-active')
+    $('.show-list').removeClass('show-list-active')
+  })
 })
