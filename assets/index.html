@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Numans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" data-inprogress="" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" data-inprogress="" />
     <link rel="stylesheet" href="css/home.min.css" data-inprogress="" />
     <title>Cercon</title>
     <style>
@@ -637,6 +638,100 @@
               </div>
             </div>
           </div>
+          <div class="work-examples-tabs">
+            <div class="tabs-header">
+              <div class="tabs-triggers">
+                <a href="#/" class="tabs-triggers__item tabs-triggers__item-active">Металлокерамика</a>
+                <a href="#/" class="tabs-triggers__item">Цельнокерамические реставрации</a>
+                <a href="#/" class="tabs-triggers__item">Съемное протезирование</a>
+                <a href="#/" class="tabs-triggers__item">CAD/CAM</a>
+                <a href="#/" class="tabs-triggers__item">3D печать</a>
+                <a href="#/" class="tabs-triggers__item">Временные коронки</a>
+                <a href="#/" class="tabs-triggers__item">WAX</a>
+              </div>
+            </div>
+          </div>
+          <div class="work-examples-slider swiper-container">
+            <div class="work-examples-slider__wrapper swiper-wrapper">
+              <div class="work-examples-slider__slide swiper-slide">
+                <div class="work-examples-slider__image">
+                  <img src="img/work-examples-img__1.png" alt="work-examples-img" />
+                </div>
+                <div class="work-examples-slider__text">
+                  <div class="text">
+                    <h6>Lorem Ipsum - это текст-"рыба", часто используемый</h6>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="work-examples-slider__slide swiper-slide">
+                <div class="work-examples-slider__image">
+                  <img src="img/work-examples-img__2.png" alt="work-examples-img" />
+                </div>
+                <div class="work-examples-slider__text">
+                  <div class="text">
+                    <h6>Lorem Ipsum - это текст-"рыба", часто используемый</h6>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="work-examples-slider__slide swiper-slide">
+                <div class="work-examples-slider__image">
+                  <img src="img/work-examples-img__3.png" alt="work-examples-img" />
+                </div>
+                <div class="work-examples-slider__text">
+                  <div class="text">
+                    <h6>Lorem Ipsum - это текст-"рыба", часто используемый</h6>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="work-examples-slider__slide swiper-slide">
+                <div class="work-examples-slider__image">
+                  <img src="img/work-examples-img__4.png" alt="work-examples-img" />
+                </div>
+                <div class="work-examples-slider__text">
+                  <div class="text">
+                    <h6>Lorem Ipsum - это текст-"рыба", часто используемый</h6>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="work-examples-slider__slide swiper-slide">
+                <div class="work-examples-slider__image">
+                  <img src="img/work-examples-img__1.png" alt="work-examples-img" />
+                </div>
+                <div class="work-examples-slider__text">
+                  <div class="text">
+                    <h6>Lorem Ipsum - это текст-"рыба", часто используемый</h6>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="work-examples-slider__slide swiper-slide">
+                <div class="work-examples-slider__image">
+                  <img src="img/work-examples-img__2.png" alt="work-examples-img" />
+                </div>
+                <div class="work-examples-slider__text">
+                  <div class="text">
+                    <h6>Lorem Ipsum - это текст-"рыба", часто используемый</h6>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-next">
+              <svg class="icon-arrow__right">
+                <use href="img/sprite.svg#icon-arrow__right"></use>
+              </svg>
+            </div>
+            <div class="button-prev">
+              <svg class="icon-arrow__left">
+                <use href="img/sprite.svg#icon-arrow__left"></use>
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </section>
       </main>
       <include src="assets/templates/footer.html"></include>
@@ -647,8 +742,10 @@
     <script src="js/jquery.matchHeight.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/accordion.min.js"></script>
 
     <script src="js/index.min.js"></script>
+    <script src="js/work-examples__slider.min.js"></script>
   </body>
 </html>

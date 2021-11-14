@@ -36,4 +36,17 @@ $(document).ready(function () {
     $($(this).attr('href')).addClass('tabs-inner-content__item-active')
     $('.show-list').removeClass('show-list-active')
   })
+
+  $('.work-examples-slider__text .text h6').each(function (i) {
+    lengthText = $(this).text().length
+    if (lengthText > 58) {
+      $(this).text($(this).text().substr(0, 58) + '...')
+    }
+  })
+  $('.work-examples-slider__text .text p').each(function (i) {
+    lengthText = $(this).text().length
+    if (lengthText > 154) {
+      $(this).text($(this).text().substr(0, 154) + '...')
+    }
+  })
 })
