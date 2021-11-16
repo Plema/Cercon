@@ -36,6 +36,16 @@ $(document).ready(function () {
     $($(this).attr('href')).addClass('tabs-inner-content__item-active')
     $('.show-list').removeClass('show-list-active')
   })
+  $('.work-examples-triggers__item').click(function (e) {
+    e.preventDefault()
+
+    $('.work-examples-triggers__item').removeClass('work-examples-triggers__item-active')
+    $('.work-examples-triggers__item').removeClass('tabs-inner-triggers__item-show')
+    $('.work-examples-content__item').removeClass('work-examples-content__item-active')
+
+    $(this).addClass('work-examples-triggers__item-active')
+    $($(this).attr('href')).addClass('work-examples-content__item-active')
+  })
 
   $('.work-examples-slider__text .text h6').each(function (i) {
     lengthText = $(this).text().length
