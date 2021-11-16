@@ -5,7 +5,7 @@
   }
   .work-examples-tabs {
     .tabs-header {
-      .tabs-triggers {
+      .work-examples-triggers {
         display: flex;
         overflow-x: auto;
         overflow: hidden;
@@ -59,11 +59,11 @@
         }
       }
     }
-    .tabs-content {
+    .work-examples-content {
       &__item {
         display: none;
         &-active {
-          display: block;
+          display: flex;
         }
       }
     }
@@ -221,7 +221,7 @@
   @media (min-width: 1400px) {
     .work-examples-tabs {
       .tabs-header {
-        .tabs-triggers {
+        .work-examples-triggers {
           justify-content: center;
         }
       }
