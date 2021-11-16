@@ -1,8 +1,4 @@
 new Swiper('.work-examples-slider', {
-  observer: true,
-  observerParents: true,
-  observerSliderChildren: true,
-
   //стрелки
   navigation: {
     nextEl: '.button-next',
@@ -76,4 +72,8 @@ new Swiper('.work-examples-slider', {
       spaceBetween: 30,
     },
   },
+
+  observer: true,
+  observerParents: true,
+  observerSliderChildren: true,
 })
