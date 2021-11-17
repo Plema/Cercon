@@ -59,4 +59,19 @@ $(document).ready(function () {
       $(this).text($(this).text().substr(0, 154) + '...')
     }
   })
+
+  $('.read-more-btn').click(function () {
+    $('.text-list').find('.show-list').toggleClass('show-list__active')
+    $('.read-more-text').toggleClass('active')
+    $('.hide-text').toggleClass('active')
+  })
+
+  if ($('.slide-1').hasClass('.swiper-slide-active')) {
+    $('.text-content').removeClass('text-content-active')
+    $($(this).attr('data-link')).addClass('text-content-active')
+  }
+  if ($('.slide-2').hasClass('.swiper-slide-active')) {
+    $('.text-content').removeClass('text-content-active')
+    $($(this).attr('data-link')).addClass('text-content-active')
+  }
 })
