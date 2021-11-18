@@ -25,7 +25,7 @@ new Swiper('.our-team-slider', {
 
   effect: 'coverflow',
   coverflowEffect: {
-    rotate: 20,
+    rotate: 0,
     stretch: 50,
     slideShadows: true,
   },
@@ -33,7 +33,7 @@ new Swiper('.our-team-slider', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
     768: {
       slidesPerView: 2,
@@ -71,4 +71,8 @@ new Swiper('.our-team-slider', {
       },
     },
   },
+
+  observer: true,
+  observerParents: true,
+  observerSliderChildren: true,
 })
