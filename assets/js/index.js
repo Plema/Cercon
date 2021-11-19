@@ -66,12 +66,25 @@ $(document).ready(function () {
     $('.hide-text').toggleClass('active')
   })
 
-  if ($('.slide-1').hasClass('.swiper-slide-active')) {
-    $('.text-content').removeClass('text-content-active')
-    $($(this).attr('data-link')).addClass('text-content-active')
-  }
-  if ($('.slide-2').hasClass('.swiper-slide-active')) {
-    $('.text-content').removeClass('text-content-active')
-    $($(this).attr('data-link')).addClass('text-content-active')
-  }
+  $('.our-team-slider .button-next').on('click', function () {
+    var active = $('.our-team-slider__slide.swiper-slide-active').data('link')
+    $('.our-team .text-content').removeClass('text-content-active')
+    $('.' + active).addClass('text-content-active')
+  })
+  $('.our-team-slider .button-prev').on('click', function () {
+    var active = $('.our-team-slider__slide.swiper-slide-active').data('link')
+    $('.our-team .text-content').removeClass('text-content-active')
+    $('.' + active).addClass('text-content-active')
+  })
+
+  $('.reviews-slider .button-next').on('click', function () {
+    var active = $('.reviews-slider__slide.swiper-slide-active').data('link')
+    $('.reviews .reviews-text-content').removeClass('reviews-text-content__active')
+    $('.' + active).addClass('reviews-text-content__active')
+  })
+  $('.reviews-slider .button-prev').on('click', function () {
+    var active = $('.reviews-slider__slide.swiper-slide-active').data('link')
+    $('.reviews .reviews-text-content').removeClass('reviews-text-content__active')
+    $('.' + active).addClass('reviews-text-content__active')
+  })
 })
