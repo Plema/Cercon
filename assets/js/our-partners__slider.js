@@ -16,7 +16,7 @@ new Swiper('.our-partners-slider', {
   speed: 700,
   loop: true,
   centeredSlides: true,
-  autoHeight: true,
+  autoHeight: false,
 
   pagination: {
     el: '.swiper-pagination',
@@ -27,7 +27,7 @@ new Swiper('.our-partners-slider', {
     320: {
       slidesPerView: 2,
       spaceBetween: 30,
-      centeredSlides: false,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 3,
@@ -39,7 +39,7 @@ new Swiper('.our-partners-slider', {
       centeredSlides: true,
     },
     1400: {
-      slidesPerView: 5,
+      slidesPerView: 4.6,
       spaceBetween: 30,
       centeredSlides: false,
     },
