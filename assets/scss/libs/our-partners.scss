@@ -7,14 +7,18 @@
   .our-partners-slider {
     position: relative;
     padding-bottom: 57px;
+    min-width: 0;
+
     .our-partners-slider__wrapper {
       align-items: center;
       justify-content: center;
+      min-width: 0;
       .our-partners-slider__slide {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: fit-content;
+        width: 205px;
+        max-width: 205px;
         img {
           min-width: 100px;
           width: fit-content;
