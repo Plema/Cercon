@@ -135,6 +135,11 @@
       }
     }
   }
+  @media (min-height: 700px) {
+    .content-wrapper {
+      margin: 100px 0 0;
+    }
+  }
   @media (min-height: 800px) {
     .content-wrapper {
       margin-top: 100px;

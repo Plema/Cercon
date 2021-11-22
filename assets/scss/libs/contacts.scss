@@ -1,0 +1,270 @@
+.contacts {
+  .contacts-inner {
+    .map-wrapper {
+      display: none;
+    }
+    .contacts-wrapper {
+      padding: 100px 18px;
+      background: #f4f5f5;
+      .title-wrapper {
+        margin-bottom: 73px;
+      }
+      .content-wrapper__left {
+        margin-bottom: 30px;
+      }
+      .contacts-wrapper__inner {
+        .delivery-wrapper {
+          margin-bottom: 30px;
+          .delivery-title {
+            font-family: 'OpenSans-SemiBold';
+            text-align: center;
+            font-size: 18px;
+            line-height: 28px;
+            color: var(--red-color);
+          }
+          .delivery-title__clock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            .icon-clock {
+              width: 18px;
+              height: 18px;
+              margin-right: 12px;
+              fill: var(--red-color);
+            }
+          }
+        }
+        .content-item {
+          margin-bottom: 30px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .contacts-item-title {
+          font-family: 'OpenSans-SemiBold';
+          font-size: 18px;
+          line-height: 28px;
+          margin-bottom: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .contacts-item-subtitle {
+          font-size: 14px;
+          line-height: 22px;
+          color: #7a7a7a;
+          text-align: center;
+        }
+        .address {
+          font-size: 18px;
+          line-height: 28px;
+          text-align: center;
+          font-style: normal;
+        }
+        .phone {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1px;
+        }
+        .whatsapp-wrapper {
+          .icon-whatsapp__green {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            transition: all 0.7s;
+          }
+          &:hover {
+            .icon-whatsapp__green {
+              transform: scale(1.3);
+            }
+          }
+          .whatsapp-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2px;
+            &__item {
+              margin-bottom: 5px;
+              .whatsapp-list__link {
+                font-size: 18px;
+                line-height: 28px;
+                transition: all 0.7s;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+              &:hover {
+                .whatsapp-list__link {
+                  color: var(--red-color);
+                }
+              }
+            }
+          }
+        }
+        .time {
+          text-align: center;
+          font-size: 18px;
+          line-height: 28px;
+          margin-bottom: 2px;
+        }
+        .social-wrapper {
+          .social-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__item {
+              margin: 0 14px;
+              width: 34px;
+              height: 34px;
+              .social-list__link {
+                width: 100%;
+                height: 100%;
+                .icon-whatsapp__green,
+                .icon-fb {
+                  width: 34px;
+                  height: 34px;
+                  transition: all 0.7s;
+                }
+              }
+              &:hover {
+                .social-list__link {
+                  .icon-whatsapp__green,
+                  .icon-fb {
+                    transform: scale(1.3);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .mail {
+          display: flex;
+          justify-content: center;
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .contacts-inner {
+      .contacts-wrapper {
+        .content-wrapper__left {
+          margin-bottom: 0;
+        }
+        .contacts-wrapper__inner {
+          .delivery-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .delivery-title__clock {
+              margin-bottom: 0;
+            }
+          }
+          .content-wrapper {
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    .contacts-inner {
+      display: flex;
+      .map-wrapper {
+        display: flex;
+        width: 51%;
+        .map {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .contacts-wrapper {
+        width: 49%;
+        padding: 100px 30px;
+        .title-wrapper {
+          .subtitle {
+            text-align: left;
+          }
+          .title {
+            text-align: left;
+            &::after {
+              transform: translate(0, 0);
+              left: 0;
+            }
+          }
+        }
+        .contacts-wrapper__inner {
+          .delivery-wrapper {
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            .delivery-title {
+              text-align: left;
+              width: 50%;
+            }
+            .delivery-title__clock {
+              justify-content: flex-start;
+            }
+          }
+          .content-wrapper {
+            justify-content: flex-start;
+          }
+          .contacts-item-title {
+            justify-content: flex-start;
+            margin-bottom: 10px;
+          }
+          .contacts-item-subtitle {
+            text-align: left;
+          }
+          .content-wrapper__left,
+          .content-wrapper__right {
+            width: 50%;
+          }
+          .address {
+            text-align: left;
+          }
+          .phone {
+            justify-content: flex-start;
+          }
+          .whatsapp-wrapper {
+            .whatsapp-list {
+              align-items: flex-start;
+            }
+          }
+          .time {
+            text-align: left;
+          }
+          .social-wrapper {
+            .social-list {
+              justify-content: flex-start;
+              &__item {
+                margin: 0 15px 0 0;
+              }
+            }
+          }
+          .mail {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .contacts-inner {
+      .contacts-wrapper {
+        padding: 100px 10px 100px 20px;
+      }
+    }
+  }
+  @media (min-width: 1600px) {
+    .contacts-inner {
+      .contacts-wrapper {
+        padding: 100px 10px 100px 134px;
+      }
+    }
+  }
+}
