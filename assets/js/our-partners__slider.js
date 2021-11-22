@@ -18,6 +18,12 @@ new Swiper('.our-partners-slider', {
   centeredSlides: true,
   autoHeight: false,
 
+  autoplay: {
+    delay: 5000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+  },
+
   pagination: {
     el: '.swiper-pagination',
     type: 'progressbar',

@@ -10,7 +10,7 @@ new Swiper('.our-team-slider', {
     type: 'fraction',
   },
 
-  simulateTouch: true,
+  simulateTouch: false,
   touchRatio: 1,
   touchAngle: 45,
   grabCursor: false,
