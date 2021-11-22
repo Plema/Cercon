@@ -1,0 +1,87 @@
+<!-- Для работы любого попапа на других страницах добавить на кнопку соответствующий класс -->
+<!-- <include src="assets/templates/pop-up.html"></include> -->
+
+<div class="modall modall-request-call">
+  <div class="modall-body">
+    <span class="close"></span>
+    <h4 class="title">Заказать звонок</h4>
+    <p class="subtitle">
+      Закажите бесплатный звонок. <br />
+      Наш специалист ответит на все ваши вопросы.
+    </p>
+    <div class="forma-wrapper">
+      <div class="input-wrapper your-name__wrapper">
+        <input class="input your-name-input" type="text" id="yourname" name="yourname" placeholder="Ваше имя" autocomplete="off" required minlength="2" />
+      </div>
+      <div class="input-wrapper your-phone__wrapper">
+        <input class="input your-phone-input" type="tel" placeholder="Ваш телефон" id="yourtel" name="yourtel" autocomplete="off" required />
+      </div>
+      <div class="input-wrapper your-email__wrapper">
+        <input class="input mail-input" type="email" placeholder="E-mail" id="youremail" name="youremail" autocomplete="off" required />
+      </div>
+      <div class="police__wrapper">
+        <input type="checkbox" class="custom-checkbox" id="police" name="police" />
+        <label for="police" class="police-label"
+          ><p class="label-text">Я даю <a href="javascript:void(0)" class="police-link"> согласие </a> на обработку моих персональных данных.</p></label
+        >
+        <button type="button" class="button button__order btn-close thx-you">Заказать</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modall modall-thx">
+  <div class="modall-body">
+    <span class="close"></span>
+    <h4 class="title">Спасибо</h4>
+    <p class="subtitle">
+      В скором времени наш менеджер <br />
+      свяжется с вами.
+    </p>
+    <button type="button" class="button button__ok btn-close">Хорошо</button>
+  </div>
+</div>
+
+<div class="modall modall-work-order active-modall">
+  <div class="modall-body active">
+    <span class="close"></span>
+    <h4 class="title">Заказ-наряд</h4>
+    <p class="subtitle">
+      Оформите заказ-надяр онлайн. <br />
+      После оформления наш менеджер свяжется с вами.
+    </p>
+    <div class="forma-wrapper">
+      <div class="form-column">
+        <div class="right-side">
+          <div class="input-wrapper clinic__wrapper">
+            <input class="input clinic-input" type="text" id="clinic" name="clinic" placeholder="Клиника" autocomplete="off" required minlength="2" />
+          </div>
+          <div class="input-wrapper doctor__wrapper">
+            <input class="input clinic-input" type="text" id="doctor" name="doctor" placeholder="Доктор" autocomplete="off" required minlength="2" />
+          </div>
+          <div class="input-wrapper patient__wrapper">
+            <input class="input clinic-input" type="text" id="patient" name="patient" placeholder="Пациент" autocomplete="off" required minlength="2" />
+          </div>
+        </div>
+        <div class="left-side"></div>
+      </div>
+      <div class="form-column">
+        <div class="right-side"></div>
+        <div class="left-side"></div>
+      </div>
+      <div class="input-wrapper work-description__wrapper">
+        <input class="input clinic-input" type="text" id="workdescription" name="workdescription" placeholder="Описание работы" autocomplete="off" required minlength="2" />
+      </div>
+      <div class="input-wrapper date-readiness__wrapper">
+        <input class="input clinic-input" type="text" id="datereadiness" name="datereadiness" placeholder="Желаемая дата готовности" autocomplete="off" required minlength="2" />
+      </div>
+      <div class="police__wrapper">
+        <input type="checkbox" class="custom-checkbox" id="police" name="police" />
+        <label for="police" class="police-label"
+          ><p class="label-text">Я даю <a href="javascript:void(0)" class="police-link"> согласие </a> на обработку моих персональных данных.</p></label
+        >
+        <button type="button" class="button button__order btn-close thx-you">Заказать</button>
+      </div>
+    </div>
+  </div>
+</div>
