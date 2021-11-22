@@ -49,9 +49,9 @@
       }
     </style>
   </head>
-  <body>
+  <body class="body">
     <div class="wrapper">
-      <include src="assets/templates/header.html"></include>
+      <include src="assets/templates/header.html"></include> <include src="assets/templates/pop-up.html"></include>
       <main class="main">
         <section class="banner">
           <div class="shadow-wrapper">
@@ -94,7 +94,7 @@
             <p class="quotes">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
           </div>
         </section>
-        <section class="about-laboratory">
+        <section class="about-laboratory" id="about-laboratory">
           <div class="container">
             <div class="about-laboratory-wrapper">
               <div class="title-wrapper">
@@ -133,7 +133,7 @@
             </div>
           </div>
         </section>
-        <section class="services-price">
+        <section class="services-price" id="services-price">
           <div class="container">
             <div class="services-price__wrapper">
               <div class="title-wrapper">
@@ -629,7 +629,7 @@
             </div>
           </div>
         </section>
-        <section class="work-examples">
+        <section class="work-examples" id="work-examples">
           <div class="container">
             <div class="work-examples__wrapper">
               <div class="title-wrapper">
@@ -1224,7 +1224,7 @@
             <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
           </div>
         </section>
-        <section class="equipment-technologies">
+        <section class="equipment-technologies" id="equipment-technologies">
           <div class="container">
             <div class="title-wrapper">
               <div class="subtitle">Оборудование и технологии</div>
@@ -1301,7 +1301,7 @@
             </button>
           </div>
         </section>
-        <section class="our-team">
+        <section class="our-team" id="our-team">
           <div class="container">
             <div class="title-wrapper">
               <div class="subtitle">наша команда</div>
@@ -1448,7 +1448,7 @@
             </div>
           </div>
         </section>
-        <section class="our-partners">
+        <section class="our-partners" id="our-partners">
           <div class="container">
             <div class="title-wrapper">
               <div class="subtitle">нам доверяют</div>
@@ -1493,7 +1493,7 @@
             </div>
           </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" id="reviews">
           <div class="reviews-wrapper">
             <div class="text-wrapper">
               <div class="reviews-text-content reviews-text-content-1 reviews-text-content__active">
@@ -1645,6 +1645,155 @@
             </div>
           </div>
         </section>
+        <section class="contacts" id="contacts">
+          <div class="contacts-inner">
+            <div class="map-wrapper">
+              <div class="map">
+                <iframe
+                  src="https://yandex.ua/map-widget/v1/?um=constructor%3A4905754c27811bd6338ddfee542068602fc0d32b8879538a8670bbc2b3d29f86&amp;source=constructor"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                ></iframe>
+              </div>
+            </div>
+            <div class="contacts-wrapper">
+              <div class="title-wrapper">
+                <div class="subtitle">контакты</div>
+                <div class="title">Lorem Ipsum - это текст-"рыба"</div>
+              </div>
+              <div class="contacts-wrapper__inner">
+                <div class="delivery-wrapper">
+                  <h6 class="delivery-title delivery-title__clock">
+                    <svg class="icon-clock">
+                      <use href="img/sprite.svg#icon-clock__red"></use>
+                    </svg>
+                    Доставка по Москве день в день
+                  </h6>
+                  <h6 class="delivery-title">Доставка в регионы</h6>
+                </div>
+                <div class="content-wrapper">
+                  <div class="content-wrapper__left">
+                    <div class="address-wrapper content-item" data-mh="my-group1">
+                      <h6 class="contacts-item-title">Адрес:</h6>
+                      <address class="address">Москва, Ул. Лобачика д. 11</address>
+                    </div>
+                    <div class="phone-wrapper content-item" data-mh="my-group2">
+                      <h6 class="contacts-item-title">Телефон:</h6>
+                      <a href="tel:74959882660" target="_blank" class="phone">+7(495)988-26-60</a>
+                      <p class="contacts-item-subtitle">Прием звонков: будни 9.30 – 19.00</p>
+                    </div>
+                    <div class="whatsapp-wrapper content-item" data-mh="my-group3">
+                      <h6 class="contacts-item-title">
+                        <svg class="icon-whatsapp__green">
+                          <use href="img/sprite.svg#icon-whatsapp__green"></use>
+                        </svg>
+                        Whatsapp
+                      </h6>
+                      <ul class="whatsapp-list">
+                        <li class="whatsapp-list__item">
+                          <a href="tel:79031747378" target="_blank" class="whatsapp-list__link">+7 (903) 174-73-78</a>
+                        </li>
+                        <li class="whatsapp-list__item">
+                          <a href="tel:79031737584" target="_blank" class="whatsapp-list__link">+7 (903) 174-73-78</a>
+                        </li>
+                      </ul>
+                      <p class="contacts-item-subtitle">Отвечаем 24/7</p>
+                    </div>
+                  </div>
+                  <div class="content-wrapper__right">
+                    <div class="time-work-wrapper content-item" data-mh="my-group1">
+                      <h6 class="contacts-item-title">Время работы:</h6>
+                      <p class="time">9:30 - 19:00</p>
+                      <p class="contacts-item-subtitle">Будние дни</p>
+                    </div>
+                    <div class="social-wrapper content-item" data-mh="my-group2">
+                      <h6 class="contacts-item-title">Соц. сети:</h6>
+                      <ul class="social-list">
+                        <li class="social-list__item">
+                          <a href="javascript:void(0)" target="_blank" class="social-list__link">
+                            <svg class="icon-whatsapp__green">
+                              <use href="img/sprite.svg#icon-whatsapp__green"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="social-list__item">
+                          <a href="javascript:void(0)" target="_blank" class="social-list__link">
+                            <svg class="icon-fb">
+                              <use href="img/sprite.svg#icon-fb"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mail-wrapper content-item" data-mh="my-group3">
+                      <h6 class="contacts-item-title">Почта:</h6>
+                      <a href="mailto:info@simkolab.ru" target="_blank" class="mail">info@simkolab.ru</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="consultation">
+          <div class="container">
+            <div class="consultation-wrapper">
+              <div class="consultation-inner__left">
+                <h2 class="consultation-title">Получить консультацию специалиста</h2>
+                <div class="consultation-form">
+                  <div class="column-wrapper">
+                    <div class="full-name__wrapper">
+                      <input class="input full-name-input" type="text" id="fullname" name="fullname" placeholder="ФИО" autocomplete="off" required minlength="2" />
+                    </div>
+                    <div class="clinic-name__wrapper">
+                      <input class="input clinic-name-input" type="text" id="fullname" name="fullname" placeholder="Название клиники" autocomplete="off" required minlength="2" />
+                    </div>
+                  </div>
+                  <div class="column-wrapper">
+                    <div class="phone__wrapper">
+                      <input class="input phone-input" type="tel" placeholder="Телефон" id="tel" name="tel" autocomplete="off" required />
+                    </div>
+                    <div class="mail__wrapper">
+                      <input class="input mail-input" type="email" placeholder="E-mail" id="email" name="email" autocomplete="off" required />
+                    </div>
+                  </div>
+                  <div class="comment__wrapper">
+                    <input class="input comment-input" type="text" id="comment" name="comment" placeholder="Комментарий" autocomplete="off" />
+                  </div>
+                  <div class="police__wrapper">
+                    <input type="checkbox" class="custom-checkbox" id="police" name="police" />
+                    <label for="police" class="police-label"
+                      ><p class="label-text">Я даю <a href="javascript:void(0)" class="police-link"> согласие </a> на обработку моих персональных данных.</p></label
+                    >
+                    <button type="button" class="button button__order">Заказать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="consultation-inner__right">
+                <div class="description-wrapper">
+                  <h3 class="description-title">Lorem Ipsum - это текст-"рыба", часто используемый</h3>
+                  <div class="description-text__wrapper">
+                    <p>
+                      Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ... Lorem Ipsum - это
+                      текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...
+                    </p>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI ...</p>
+                  </div>
+                  <button type="button" class="button button__order">
+                    <p>
+                      Оформить <br />
+                      заказ-наряд онлайн
+                    </p>
+                    <svg class="icon-file">
+                      <use href="img/sprite.svg#icon-file__white"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <include src="assets/templates/footer.html"></include>
     </div>
@@ -1658,6 +1807,8 @@
     <script src="js/accordion.min.js"></script>
 
     <script src="js/index.min.js"></script>
+    <script src="js/header-burger.min.js"></script>
+    <script src="js/sticky-header.min.js"></script>
     <script src="js/work-examples__slider.min.js"></script>
     <script src="js/equipment-technologies__slider.min.js"></script>
     <script src="js/our-team__slider.min.js"></script>
