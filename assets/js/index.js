@@ -87,4 +87,51 @@ $(document).ready(function () {
     $('.reviews .reviews-text-content').removeClass('reviews-text-content__active')
     $('.' + active).addClass('reviews-text-content__active')
   })
+
+  $('.anchor').on('click', function (event) {
+    event.preventDefault()
+    var id = $(this).attr('href'),
+      top = $(id).offset().top
+    $('body,html').animate({ scrollTop: top }, 700)
+  })
+
+  jQuery(function ($) {
+    $(document).mouseup(function (e) {
+      var div = $('.modall-body')
+      if (!div.is(e.target) && div.has(e.target).length === 0) {
+        div.removeClass('active-modall')
+        $('.modall').removeClass('active-modall')
+        $('.body').removeClass('showing-modal')
+      }
+    })
+  })
+  $('.close, .btn-close').on('click', function () {
+    $('.modall').removeClass('active-modall')
+    $('.body').removeClass('showing-modal')
+    $('.modall-body ').removeClass('active')
+  })
+
+  $('.request-call').on('click', function () {
+    $('.modall').removeClass('active-modall')
+    $('.body').addClass('showing-modal')
+    $('.modall-request-call').addClass('active-modall')
+    setTimeout(function () {
+      $('.modall-body ').addClass('active')
+    }, 200)
+  })
+  $('.thx-you').on('click', function () {
+    $('.modall').removeClass('active-modall')
+    $('.body').addClass('showing-modal')
+    $('.modall-thx').addClass('active-modall')
+    setTimeout(function () {
+      $('.modall-body ').addClass('active')
+    }, 200)
+  })
+
+  $(function () {
+    $('*[placeholder="Телефон"]*').mask('+7 (000) 000 - 00 - 00')
+  })
+  $(function () {
+    $('*[placeholder="Ваш телефон"]*').mask('+7 (000) 000 - 00 - 00')
+  })
 })

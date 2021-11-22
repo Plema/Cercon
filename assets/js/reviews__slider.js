@@ -26,6 +26,16 @@ let reviewsSlider = new Swiper('.reviews-slider', {
       slidesPerView: 1,
       spaceBetween: 30,
     },
+    1024: {
+      slidesPerView: 1.4,
+      spaceBetween: 30,
+      loop: true,
+    },
+    1440: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+      loop: true,
+    },
   },
 })
 
