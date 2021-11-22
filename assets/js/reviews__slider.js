@@ -12,7 +12,7 @@ let reviewsSlider = new Swiper('.reviews-slider', {
     onlyInViewport: true,
     pageUpDown: true,
   },
-  simulateTouch: true,
+  simulateTouch: false,
   touchRatio: 1,
   touchAngle: 45,
   grabCursor: false,

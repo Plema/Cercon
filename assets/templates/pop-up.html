@@ -20,8 +20,8 @@
         <input class="input mail-input" type="email" placeholder="E-mail" id="youremail" name="youremail" autocomplete="off" required />
       </div>
       <div class="police__wrapper">
-        <input type="checkbox" class="custom-checkbox" id="police" name="police" />
-        <label for="police" class="police-label"
+        <input type="checkbox" class="custom-checkbox" id="policerequest" name="policerequest" />
+        <label for="policerequest" class="police-label"
           ><p class="label-text">Я даю <a href="javascript:void(0)" class="police-link"> согласие </a> на обработку моих персональных данных.</p></label
         >
         <button type="button" class="button button__order btn-close thx-you">Заказать</button>
@@ -42,8 +42,8 @@
   </div>
 </div>
 
-<div class="modall modall-work-order active-modall">
-  <div class="modall-body active">
+<div class="modall modall-work-order">
+  <div class="modall-body">
     <span class="close"></span>
     <h4 class="title">Заказ-наряд</h4>
     <p class="subtitle">
@@ -52,7 +52,7 @@
     </p>
     <div class="forma-wrapper">
       <div class="form-column">
-        <div class="right-side">
+        <div class="left-side">
           <div class="input-wrapper clinic__wrapper">
             <input class="input clinic-input" type="text" id="clinic" name="clinic" placeholder="Клиника" autocomplete="off" required minlength="2" />
           </div>
@@ -63,11 +63,65 @@
             <input class="input clinic-input" type="text" id="patient" name="patient" placeholder="Пациент" autocomplete="off" required minlength="2" />
           </div>
         </div>
-        <div class="left-side"></div>
+        <div class="right-side">
+          <div class="select-wrapper">
+            <div class="select-color__wrapper">
+              <select class="select select-color" name="colorselection">
+                <option disabled>Выбор цвета</option>
+                <option value="Цвет №1">Цвет №1</option>
+                <option value="Цвет №2">Цвет №2</option>
+                <option value="Цвет №3">Цвет №3</option>
+                <option value="Цвет №4">Цвет №4</option>
+                <option value="Цвет №5">Цвет №5</option>
+              </select>
+            </div>
+            <div class="select-toothnumber__wrapper">
+              <select class="select select-toothnumber" name="toothnumber">
+                <option disabled>Номер зуба</option>
+                <option value="Номер зуба №1">Номер зуба №1</option>
+                <option value="Номер зуба №2">Номер зуба №2</option>
+                <option value="Номер зуба №3">Номер зуба №3</option>
+                <option value="Номер зуба №4">Номер зуба №4</option>
+                <option value="Номер зуба №5">Номер зуба №5</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="form-column">
-        <div class="right-side"></div>
-        <div class="left-side"></div>
+        <div class="left-side">
+          <div class="patient-gender__wrapper">
+            <h6>Пол пациента</h6>
+            <div class="patient-gender__inner">
+              <div class="radio">
+                <label class="custom-radio">
+                  <input type="radio" name="color" value="man" />
+                  <span>М</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label class="custom-radio">
+                  <input type="radio" name="color" value="woman" />
+                  <span>Ж</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="select-wrapper">
+            <div class="select-facetype__wrapper">
+              <select class="select select-facetype" name="facetype">
+                <option disabled>Выбрать тип лица</option>
+                <option value="Тип лица №1">Тип лица №1</option>
+                <option value="Тип лица №2">Тип лица №2</option>
+                <option value="Тип лица №3">Тип лица №3</option>
+                <option value="Тип лица №4">Тип лица №4</option>
+                <option value="Тип лица №5">Тип лица №5</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="input-wrapper work-description__wrapper">
         <input class="input clinic-input" type="text" id="workdescription" name="workdescription" placeholder="Описание работы" autocomplete="off" required minlength="2" />
@@ -75,13 +129,75 @@
       <div class="input-wrapper date-readiness__wrapper">
         <input class="input clinic-input" type="text" id="datereadiness" name="datereadiness" placeholder="Желаемая дата готовности" autocomplete="off" required minlength="2" />
       </div>
+      <div class="attached-work__wrapper">
+        <h6>К работе прилагается:</h6>
+        <ul class="attached-list">
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-1" name="attached-1" />
+            <label for="attached-1" class="police-label"><p class="label-text">Ложка металлическая</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-2" name="attached-2" />
+            <label for="attached-2" class="police-label"><p class="label-text">Модель</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-3" name="attached-3" />
+            <label for="attached-3" class="police-label"><p class="label-text">Десна</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-4" name="attached-4" />
+            <label for="attached-4" class="police-label"><p class="label-text">Аналог</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-5" name="attached-5" />
+            <label for="attached-5" class="police-label"><p class="label-text">Артикулятор</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-6" name="attached-6" />
+            <label for="attached-6" class="police-label"><p class="label-text">Ложка пластиковая</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-7" name="attached-7" />
+            <label for="attached-7" class="police-label"><p class="label-text">Пр. шаблон</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-8" name="attached-8" />
+            <label for="attached-8" class="police-label"><p class="label-text">Трансфер</p></label>
+          </li>
+          <li class="attached-list__item">
+            <input type="checkbox" class="custom-checkbox" id="attached-8" name="attached-8" />
+            <label for="attached-8" class="police-label"><p class="label-text">Абатмент</p></label>
+          </li>
+        </ul>
+        <div class="other__wrapper">
+          <div>
+            <input type="checkbox" class="custom-checkbox" id="attached-other" name="attached-other" />
+            <label for="attached-other" class="police-label"><p class="label-text">Другое</p></label>
+          </div>
+          <input type="text" id="other-comment" class="other-comment" />
+        </div>
+      </div>
+      <div class="upload_form">
+        <label>
+          <input name="file" type="file" class="main_input_file" />
+          <div class="upload_form-btn">Прикрепить фото</div>
+        </label>
+        <div class="f_name__wrapper">
+          <div class="icon-wrapper">
+            <svg class="icon-clip__grey">
+              <use href="img/sprite.svg#icon-clip__grey"></use>
+            </svg>
+          </div>
+          <input class="f_name" type="text" id="f_name" value="Файл не выбран." disabled />
+        </div>
+      </div>
       <div class="police__wrapper">
-        <input type="checkbox" class="custom-checkbox" id="police" name="police" />
-        <label for="police" class="police-label"
+        <input type="checkbox" class="custom-checkbox" id="policeorder" name="policeorder" />
+        <label for="policeorder" class="police-label"
           ><p class="label-text">Я даю <a href="javascript:void(0)" class="police-link"> согласие </a> на обработку моих персональных данных.</p></label
         >
-        <button type="button" class="button button__order btn-close thx-you">Заказать</button>
       </div>
+      <button type="button" class="button button__order btn-close thx-you">Заказать</button>
     </div>
   </div>
 </div>
