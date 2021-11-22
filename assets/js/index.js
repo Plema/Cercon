@@ -128,10 +128,83 @@ $(document).ready(function () {
     }, 200)
   })
 
+  $('.work-order-btn').on('click', function () {
+    $('.modall').removeClass('active-modall')
+    $('.body').addClass('showing-modal')
+    $('.modall-work-order').addClass('active-modall')
+    setTimeout(function () {
+      $('.modall-body ').addClass('active')
+    }, 200)
+  })
+
   $(function () {
     $('*[placeholder="Телефон"]*').mask('+7 (000) 000 - 00 - 00')
   })
   $(function () {
     $('*[placeholder="Ваш телефон"]*').mask('+7 (000) 000 - 00 - 00')
+  })
+
+  $('.select').each(function () {
+    const _this = $(this),
+      selectOption = _this.find('option'),
+      selectOptionLength = selectOption.length,
+      selectedOption = selectOption.filter(':selected'),
+      duration = 450 // длительность анимации
+
+    _this.hide()
+    _this.wrap('<div class="select-inner"></div>')
+    $('<div>', {
+      class: 'new-select',
+      text: _this.children('option:disabled').text(),
+    }).insertAfter(_this)
+
+    const selectHead = _this.next('.new-select')
+    $('<div>', {
+      class: 'new-select__list',
+    }).insertAfter(selectHead)
+
+    const selectList = selectHead.next('.new-select__list')
+    for (let i = 1; i < selectOptionLength; i++) {
+      $('<div>', {
+        class: 'new-select__item',
+        html: $('<span>', {
+          text: selectOption.eq(i).text(),
+        }),
+      })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList)
+    }
+
+    const selectItem = selectList.find('.new-select__item')
+    selectList.slideUp(0)
+    selectHead.on('click', function () {
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on')
+        selectList.slideDown(duration)
+
+        selectItem.on('click', function () {
+          let chooseItem = $(this).data('value')
+
+          $('select').val(chooseItem).attr('selected', 'selected')
+          selectHead.text($(this).find('span').text())
+
+          selectList.slideUp(duration)
+          selectHead.removeClass('on')
+        })
+      } else {
+        $(this).removeClass('on')
+        selectList.slideUp(duration)
+      }
+    })
+  })
+
+  $('.main_input_file').change(function () {
+    var f_name = []
+
+    for (var i = 0; i < $(this).get(0).files.length; ++i) {
+      f_name.push($(this).get(0).files[i].name)
+    }
+
+    $('#f_name').val(f_name.join(', '))
   })
 })
