@@ -10,7 +10,7 @@ $(document).ready(function () {
     $('body,html').animate({ scrollTop: top }, 700)
   })
 
-  $('.tabs-triggers__item').click(function (e) {
+  $(' .tabs-triggers__item').click(function (e) {
     e.preventDefault()
 
     $('.tabs-triggers__item').removeClass('tabs-triggers__item-active')
@@ -20,22 +20,49 @@ $(document).ready(function () {
     $($(this).attr('href')).addClass('tabs-content__item-active')
   })
 
-  $('.show-list').on('click', function () {
-    $('.show-list').toggleClass('show-list-active')
-    $('.tabs-inner-triggers__item').toggleClass('tabs-inner-triggers__item-show')
+  // $(' .tabs-triggers__item').click(function (e) {
+  //   e.preventDefault()
+
+  //   $('.tabs-triggers__item').removeClass('tabs-triggers__item-active')
+  //   $('.tabs-content__item').removeClass('tabs-content__item-active')
+
+  //   $(this).addClass('tabs-triggers__item-active')
+  //   $($(this).attr('href')).addClass('tabs-content__item-active')
+  // })
+
+  $('.for-clinics .show-list').on('click', function () {
+    $('.for-clinics .show-list').toggleClass('show-list-active')
+    $('.for-clinics .tabs-inner-triggers__item').toggleClass('tabs-inner-triggers__item-show')
+  })
+  $('.for-laboratories .show-list').on('click', function () {
+    $('.for-laboratories .show-list').toggleClass('show-list-active')
+    $('.for-laboratories .tabs-inner-triggers__item').toggleClass('tabs-inner-triggers__item-show')
   })
 
-  $('.tabs-inner-triggers__item').click(function (e) {
+  $('.for-clinics .tabs-inner-triggers__item').click(function (e) {
     e.preventDefault()
 
-    $('.tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-active')
-    $('.tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-show')
-    $('.tabs-inner-content__item').removeClass('tabs-inner-content__item-active')
+    $('.for-clinics .tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-active')
+    $('.for-clinics .tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-show')
+    $('.for-clinics .tabs-inner-content__item').removeClass('tabs-inner-content__item-active')
 
     $(this).addClass('tabs-inner-triggers__item-active')
     $($(this).attr('href')).addClass('tabs-inner-content__item-active')
     $('.show-list').removeClass('show-list-active')
   })
+
+  $('.for-laboratories .tabs-inner-triggers__item').click(function (e) {
+    e.preventDefault()
+
+    $('.for-laboratories .tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-active')
+    $('.for-laboratories .tabs-inner-triggers__item').removeClass('tabs-inner-triggers__item-show')
+    $('.for-laboratories .tabs-inner-content__item').removeClass('tabs-inner-content__item-active')
+
+    $(this).addClass('tabs-inner-triggers__item-active')
+    $($(this).attr('href')).addClass('tabs-inner-content__item-active')
+    $('.show-list').removeClass('show-list-active')
+  })
+
   $('.work-examples-triggers__item').click(function (e) {
     e.preventDefault()
 
