@@ -232,6 +232,27 @@
                     }
                   }
                 }
+                .button-more {
+                  min-width: 252px;
+                  margin: 0 auto 43px;
+                  p {
+                    font-family: 'OpenSans-SemiBold';
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: var(--white-color);
+                  }
+                  .icon-refresh {
+                    width: 19px;
+                    height: 19px;
+                    margin-left: 16px;
+                    fill: var(--white-color);
+                  }
+                  &:hover {
+                    .icon-refresh {
+                      transform: rotate(360deg);
+                    }
+                  }
+                }
               }
             }
           }
@@ -383,9 +404,15 @@
               }
               .tabs-inner-content {
                 &__item {
+                  position: relative;
                   .table-wrapper {
                     padding-bottom: 0;
                     margin-bottom: 45px;
+                  }
+                  .button-more {
+                    position: absolute;
+                    margin: 0;
+                    min-width: 223px;
                   }
                 }
               }
