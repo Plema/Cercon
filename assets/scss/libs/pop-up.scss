@@ -101,9 +101,6 @@
   .input-wrapper {
     width: 100%;
     margin-bottom: 24px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
   .input {
     padding: 11px 2px;
@@ -593,6 +590,10 @@
           justify-content: space-between;
           align-items: flex-start;
           margin-bottom: 34px;
+          .your-phone__wrapper,
+          .your-email__wrapper {
+            margin-bottom: 0;
+          }
           .right-side,
           .left-side {
             width: 100%;
