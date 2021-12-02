@@ -44,11 +44,11 @@
           }
         }
         .police__wrapper {
+          display: flex;
           .custom-checkbox {
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
-            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            accent-color: #dd291a;
           }
           .police-label {
             font-size: 16px;
@@ -104,11 +104,17 @@
           .custom-checkbox:disabled + label::before {
             background-color: var(--white-color);
           }
-          .button__order {
-            width: 200px;
-            height: 52px;
-            margin: 30px auto 0;
-          }
+        }
+        .button__order {
+          width: 200px;
+          height: 52px;
+          margin: 30px auto 0;
+        }
+        .wpcf7-spinner {
+          display: none;
+          opacity: 0;
+          position: absolute;
+          z-index: -1;
         }
       }
     }
@@ -153,6 +159,10 @@
       .consultation-inner__left {
         width: 48%;
         margin-bottom: 0;
+        .police__inner {
+          display: flex;
+          align-items: flex-start;
+        }
         .consultation-title {
           font-size: 34px;
           line-height: 40px;
@@ -162,6 +172,7 @@
             font-size: 18px;
             line-height: 28px;
           }
+
           .police__wrapper {
             display: flex;
             .custom-checkbox + label {
@@ -174,8 +185,21 @@
               width: 200px;
               height: 52px;
               margin: 0;
-              margin-left: 35px;
+              // margin-left: 35px;
+              margin-left: auto;
+              position: relative;
             }
+            .wpcf7-spinner {
+              position: absolute;
+              z-index: -1;
+              display: none;
+              opacity: 0;
+            }
+          }
+          .button__order {
+            width: 200px;
+            height: 52px;
+            margin: 0 auto;
           }
         }
       }
@@ -206,6 +230,14 @@
             .mail__wrapper {
               width: 100%;
               max-width: 308px;
+            }
+          }
+          .police__wrapper {
+            .button__order {
+              width: 200px;
+              height: 52px;
+              margin: 0;
+              margin-left: 35px;
             }
           }
         }
