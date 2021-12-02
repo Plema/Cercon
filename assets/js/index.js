@@ -155,6 +155,30 @@ $(document).ready(function () {
     }, 200)
   })
 
+  $('.error-btn').on('click', function () {
+    $('.modall-error').addClass('active-modall')
+    setTimeout(function () {
+      $('.modall-body ').addClass('active')
+    }, 200)
+  })
+  $('.close-error').on('click', function () {
+    $('.modall-error').removeClass('active-modall')
+    $('.modall-error .modall-body').addClass('active')
+  })
+  $('.close-error-btn').on('click', function () {
+    $('.modall-error').removeClass('active-modall')
+    $('.modall-error .modall-body').addClass('active')
+  })
+
+  $('.consultation-btn').on('click', function () {
+    $('.modall').removeClass('active-modall')
+    $('.body').addClass('showing-modal')
+    $('.modall-consultation').addClass('active-modall')
+    setTimeout(function () {
+      $('.modall-body ').addClass('active')
+    }, 200)
+  })
+
   $('.work-order-btn').on('click', function () {
     $('.modall').removeClass('active-modall')
     $('.body').addClass('showing-modal')
@@ -171,7 +195,7 @@ $(document).ready(function () {
     $('*[placeholder="Ваш телефон"]*').mask('+7 (000) 000 - 00 - 00')
   })
 
-  $('.select').each(function () {
+  $('.select-col').each(function () {
     const _this = $(this),
       selectOption = _this.find('option'),
       selectOptionLength = selectOption.length,
@@ -179,7 +203,113 @@ $(document).ready(function () {
       duration = 450 // длительность анимации
 
     _this.hide()
-    _this.wrap('<div class="select-inner"></div>')
+    _this.wrap('<div class="select-inner-col"></div>')
+    $('<div>', {
+      class: 'new-select',
+      text: _this.children('option:disabled').text(),
+    }).insertAfter(_this)
+
+    const selectHead = _this.next('.new-select')
+    $('<div>', {
+      class: 'new-select__list',
+    }).insertAfter(selectHead)
+
+    const selectList = selectHead.next('.new-select__list')
+    for (let i = 1; i < selectOptionLength; i++) {
+      $('<div>', {
+        class: 'new-select__item',
+        html: $('<span>', {
+          text: selectOption.eq(i).text(),
+        }),
+      })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList)
+    }
+
+    const selectItem = selectList.find('.new-select__item')
+    selectList.slideUp(0)
+    selectHead.on('click', function () {
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on')
+        selectList.slideDown(duration)
+
+        selectItem.on('click', function () {
+          let chooseItem = $(this).data('value')
+
+          $('select').val(chooseItem).attr('selected', 'selected')
+          selectHead.text($(this).find('span').text())
+
+          selectList.slideUp(duration)
+          selectHead.removeClass('on')
+        })
+      } else {
+        $(this).removeClass('on')
+        selectList.slideUp(duration)
+      }
+    })
+  })
+  $('.select-tn').each(function () {
+    const _this = $(this),
+      selectOption = _this.find('option'),
+      selectOptionLength = selectOption.length,
+      selectedOption = selectOption.filter(':selected'),
+      duration = 450 // длительность анимации
+
+    _this.hide()
+    _this.wrap('<div class="select-inner-tn"></div>')
+    $('<div>', {
+      class: 'new-select',
+      text: _this.children('option:disabled').text(),
+    }).insertAfter(_this)
+
+    const selectHead = _this.next('.new-select')
+    $('<div>', {
+      class: 'new-select__list',
+    }).insertAfter(selectHead)
+
+    const selectList = selectHead.next('.new-select__list')
+    for (let i = 1; i < selectOptionLength; i++) {
+      $('<div>', {
+        class: 'new-select__item',
+        html: $('<span>', {
+          text: selectOption.eq(i).text(),
+        }),
+      })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList)
+    }
+
+    const selectItem = selectList.find('.new-select__item')
+    selectList.slideUp(0)
+    selectHead.on('click', function () {
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on')
+        selectList.slideDown(duration)
+
+        selectItem.on('click', function () {
+          let chooseItem = $(this).data('value')
+
+          $('select').val(chooseItem).attr('selected', 'selected')
+          selectHead.text($(this).find('span').text())
+
+          selectList.slideUp(duration)
+          selectHead.removeClass('on')
+        })
+      } else {
+        $(this).removeClass('on')
+        selectList.slideUp(duration)
+      }
+    })
+  })
+  $('.select-ft').each(function () {
+    const _this = $(this),
+      selectOption = _this.find('option'),
+      selectOptionLength = selectOption.length,
+      selectedOption = selectOption.filter(':selected'),
+      duration = 450 // длительность анимации
+
+    _this.hide()
+    _this.wrap('<div class="select-inner-ft"></div>')
     $('<div>', {
       class: 'new-select',
       text: _this.children('option:disabled').text(),
@@ -234,4 +364,6 @@ $(document).ready(function () {
 
     $('#f_name').val(f_name.join(', '))
   })
+
+  $('.attached-list [type=checkbox]').addClass('custom-checkbox')
 })
