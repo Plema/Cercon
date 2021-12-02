@@ -433,9 +433,9 @@
     .header__desktop {
       .menu-list {
         &__item {
-          margin-left: 20px;
+          margin-left: 12px;
           .menu-link {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 22px;
           }
         }
@@ -471,7 +471,7 @@
     .header__desktop {
       .menu-list {
         &__item {
-          margin-left: 70px;
+          margin-left: 60px;
         }
       }
       .contacts-wrapper {
@@ -491,7 +491,7 @@
     top: 0;
     .header__desktop {
       height: 64px;
-      padding: 12px 0 12px;
+      padding: 10px 0 10px;
       .logo-wrapper {
         width: 144px;
         .logo-link {
@@ -499,13 +499,14 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 144px;
+          width: 164px;
           height: 100%;
           &__icon {
             width: 142px;
             height: 20px;
           }
           &__text {
+            display: none;
             margin-top: 6px;
             font-family: 'OpenSans-SemiBold';
             font-size: 6px;

@@ -61,12 +61,17 @@
           line-height: 28px;
           text-align: center;
           font-style: normal;
+          &:hover {
+            color: var(--red-color);
+          }
         }
         .phone {
           display: flex;
           justify-content: center;
           margin-bottom: 1px;
           transition: all 0.7s;
+          font-size: 18px;
+          line-height: 28px;
           &:hover {
             color: var(--red-color);
           }
@@ -76,6 +81,7 @@
             width: 24px;
             height: 24px;
             margin-right: 8px;
+
             transition: all 0.7s;
           }
           &:hover {
