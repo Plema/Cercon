@@ -30,6 +30,42 @@
   </div>
 </div>
 
+<div class="modall modall-consultation">
+  <div class="modall-body">
+    <span class="close"></span>
+    <h4 class="title">Получить консультацию специалиста</h4>
+
+    <div class="forma-wrapper">
+      <div class="form-column">
+        <div class="input-wrapper your-name__wrapper">
+          <input class="input your-name-input" type="text" id="yourname" name="yourname" placeholder="ФИО" autocomplete="off" required minlength="2" />
+        </div>
+        <div class="input-wrapper your-clinik__wrapper">
+          <input class="input your-clinik-input" type="text" id="yourclinik" name="yourclinik" placeholder="Название клиники" autocomplete="off" required minlength="2" />
+        </div>
+      </div>
+      <div class="form-column">
+        <div class="input-wrapper your-phone__wrapper">
+          <input class="input your-phone-input" type="tel" placeholder="Телефон" id="yourtel" name="yourtel" autocomplete="off" required />
+        </div>
+        <div class="input-wrapper your-email__wrapper">
+          <input class="input mail-input" type="email" placeholder="E-mail" id="youremail" name="youremail" autocomplete="off" required />
+        </div>
+      </div>
+      <div class="input-wrapper your-comment__wrapper">
+        <input class="input comment-input" type="text" placeholder="Комментарий" id="yourecomment" name="yourecomment" autocomplete="off" required />
+      </div>
+      <div class="police__wrapper">
+        <input type="checkbox" class="custom-checkbox" id="policerequest" name="policerequest" />
+        <label for="policerequest" class="police-label"
+          ><p class="label-text">Я даю <a href="javascript:void(0)" class="police-link"> согласие </a> на обработку моих персональных данных.</p></label
+        >
+      </div>
+      <button type="button" class="button button__order btn-close thx-you">Заказать</button>
+    </div>
+  </div>
+</div>
+
 <div class="modall modall-thx">
   <div class="modall-body">
     <span class="close"></span>
@@ -39,6 +75,15 @@
       свяжется с вами.
     </p>
     <button type="button" class="button button__ok btn-close">Хорошо</button>
+  </div>
+</div>
+
+<div class="modall modall-error">
+  <div class="modall-body error-body">
+    <span class="close-error work-order-btn"></span>
+    <h4 class="title">Ошибка!</h4>
+    <p class="subtitle">Заполните все поля ввода данных</p>
+    <button type="button" class="button button__ok close-error-btn work-order-btn">Хорошо</button>
   </div>
 </div>
 
@@ -78,7 +123,7 @@
         <div class="right-side">
           <div class="select-wrapper">
             <div class="select-color__wrapper">
-              <select class="select select-color" name="colorselection">
+              <select class="select-col select-color" name="colorselection">
                 <option disabled>Выбор цвета</option>
                 <option value="Цвет №1">Цвет №1</option>
                 <option value="Цвет №2">Цвет №2</option>
@@ -88,7 +133,7 @@
               </select>
             </div>
             <div class="select-toothnumber__wrapper">
-              <select class="select select-toothnumber" name="toothnumber">
+              <select class="select-tn select-toothnumber" name="toothnumber">
                 <option disabled>Номер зуба</option>
                 <option value="Номер зуба №1">Номер зуба №1</option>
                 <option value="Номер зуба №2">Номер зуба №2</option>
@@ -123,7 +168,7 @@
         <div class="right-side">
           <div class="select-wrapper">
             <div class="select-facetype__wrapper">
-              <select class="select select-facetype" name="facetype">
+              <select class="select-ft select-facetype" name="facetype">
                 <option disabled>Выбрать тип лица</option>
                 <option value="Тип лица №1">Тип лица №1</option>
                 <option value="Тип лица №2">Тип лица №2</option>
@@ -209,7 +254,7 @@
           ><p class="label-text">Я даю <a href="javascript:void(0)" class="police-link"> согласие </a> на обработку моих персональных данных.</p></label
         >
       </div>
-      <button type="button" class="button button__order btn-close thx-you">Заказать</button>
+      <button type="button" class="button button__order error-btn btn-close">Заказать</button>
     </div>
   </div>
 </div>
