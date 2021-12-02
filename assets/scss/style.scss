@@ -262,3 +262,18 @@ p {
     }
   }
 }
+
+.wpcf7 form.init .wpcf7-response-output,
+.wpcf7 form.resetting .wpcf7-response-output,
+.wpcf7 form.submitting .wpcf7-response-output {
+  display: none;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+.wpcf7-list-item {
+  display: inline-block;
+  margin: 0;
+  margin-right: 20px;
+}
