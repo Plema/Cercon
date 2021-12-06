@@ -5,21 +5,23 @@
   }
   .work-examples-tabs {
     .tabs-header {
+      padding: 0 20px;
       .work-examples-triggers {
         display: flex;
         overflow-x: auto;
         overflow: hidden;
-        padding-left: 40px;
+        padding-left: 20px;
+        padding-bottom: 20px;
         margin-bottom: 40px;
         &::-webkit-scrollbar {
           height: 6px;
-          width: 100;
+          width: 103px;
         }
         &::-webkit-scrollbar-thumb {
-          background: transparent;
+          background: var(--red-color);
         }
         &::-webkit-scrollbar-track {
-          background: transparent;
+          background: #dcdcdc;
         }
         &__item {
           // display: block;
