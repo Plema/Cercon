@@ -57,10 +57,13 @@
           text-align: center;
         }
         .address {
+          display: flex;
           font-size: 18px;
           line-height: 28px;
           text-align: center;
           font-style: normal;
+          width: fit-content;
+          margin: 0 auto;
           &:hover {
             color: var(--red-color);
           }
@@ -112,6 +115,9 @@
               }
             }
           }
+        }
+        .whatsapp-wrapper__desktop {
+          display: none;
         }
         .time {
           text-align: center;
@@ -184,6 +190,20 @@
       }
     }
   }
+  @media (min-width: 1024px) {
+    .contacts-inner {
+      .contacts-wrapper {
+        .contacts-wrapper__inner {
+          .whatsapp-wrapper__mob {
+            display: none;
+          }
+          .whatsapp-wrapper__desktop {
+            display: block;
+          }
+        }
+      }
+    }
+  }
   @media (min-width: 1280px) {
     .contacts-inner {
       display: flex;
@@ -239,6 +259,7 @@
           }
           .address {
             text-align: left;
+            margin: 0;
           }
           .phone {
             justify-content: flex-start;
