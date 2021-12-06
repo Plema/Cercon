@@ -14,8 +14,8 @@ new Swiper('.our-partners-slider', {
   },
 
   speed: 700,
-  loop: true,
-  centeredSlides: true,
+  loop: false,
+  centeredSlides: false,
   autoHeight: false,
 
   autoplay: {
