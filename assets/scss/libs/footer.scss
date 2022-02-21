@@ -1,0 +1,25 @@
+.footer {
+  background: #121212;
+  width: 100%;
+  .footer-wrapper {
+    border-top: 1px solid var(--white-color);
+    padding: 18px 0 21px;
+    .footer-text {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: var(--white-color);
+    }
+  }
+  @media (min-width: 1024px) {
+    border-top: 1px solid var(--white-color);
+    .footer-wrapper {
+      border: none;
+      padding: 26px 0 27px;
+      .footer-text {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+}
