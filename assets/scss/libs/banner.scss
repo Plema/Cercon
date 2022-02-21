@@ -1,0 +1,206 @@
+.banner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .shadow-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.46);
+    display: flex;
+    align-items: center;
+  }
+  .content-wrapper {
+    padding-left: 9px;
+    .main-title {
+      font-family: 'OpenSans-SemiBold';
+      font-size: 34px;
+      line-height: 46px;
+      color: var(--white-color);
+      position: relative;
+      margin-bottom: 14px;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 1px;
+        background: var(--white-color);
+        transform: translate(0, -50%);
+        top: 25%;
+        left: -27px;
+      }
+    }
+    .main-description {
+      font-size: 18px;
+      line-height: 30px;
+      color: var(--white-color);
+      margin-bottom: 42px;
+    }
+    .submit-application {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      p {
+        font-family: 'OpenSans-SemiBold';
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--white-color);
+      }
+      .icon-file {
+        width: 27px;
+        height: 27px;
+        margin-left: 17px;
+        fill: var(--white-color);
+      }
+    }
+  }
+  .content__desktop {
+    display: none;
+  }
+  .anchor__down {
+    display: none;
+  }
+  .banner-video {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .content-wrapper {
+      width: 80%;
+      .main-title {
+        font-size: 45px;
+        line-height: 58px;
+        margin-bottom: 32px;
+      }
+      .main-description {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 80px;
+      }
+      .submit-application {
+        margin: 0;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    position: relative;
+    .shadow-wrapper {
+      position: absolute;
+      z-index: 1;
+    }
+    .anchor__down {
+      display: block;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 48px;
+      left: 50%;
+      bottom: -100px;
+      .icon-anchor {
+        width: 36px;
+        height: 48px;
+        fill: rgba(255, 255, 255, 0.65);
+      }
+    }
+    .content-wrapper {
+      width: 100%;
+      margin: 50px 0;
+      padding-left: 20px;
+      .main-title {
+        width: fit-content;
+        &::before {
+          transform: translate(-50%, -50%);
+          top: 50%;
+          width: 200px;
+          left: -15%;
+        }
+      }
+      .main-description {
+        width: 700px;
+      }
+    }
+    .content__desktop {
+      display: block;
+      max-width: 485px;
+      padding-left: 18px;
+      margin-left: auto;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 90%;
+        width: 2px;
+        background: var(--white-color);
+        transform: translate(0, -50%);
+        top: 50%;
+        left: 0;
+      }
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--white-color);
+      }
+    }
+    .banner-video {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+  @media (min-width: 1024px) and (min-height: 600px) {
+    .content-wrapper {
+      margin: 100px 0 0;
+      .main-title {
+        margin-bottom: 22px;
+      }
+      .main-description {
+        margin-bottom: 30px;
+      }
+    }
+    .content__desktop {
+      p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+  @media (min-height: 700px) {
+    .content-wrapper {
+      margin: 100px 0 0;
+      .main-title {
+        margin-bottom: 45px;
+      }
+      .main-description {
+        margin-bottom: 80px;
+      }
+    }
+    .content__desktop {
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+  @media (min-height: 800px) {
+    .content-wrapper {
+      margin-top: 100px;
+    }
+  }
+  @media (min-height: 900px) {
+    .content-wrapper {
+      margin-top: 200px;
+      margin-bottom: 90px;
+    }
+  }
+  @media (min-width: 1600px) {
+    .content-wrapper {
+      .main-title {
+        &::before {
+          left: -18%;
+        }
+      }
+    }
+  }
+}
